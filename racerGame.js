@@ -22,11 +22,17 @@ function startGame() {
             $('#player1').width($('#player1').width() + speed);
             $('.').width($('#player1').width() + speed);
             console.log("Q was pressed");
+            if (width >= "950px"){
+              alert('Player 1 is the Winner!!');
+            }
         }else if (key == 80) {
             var width = $('#player2').width();
             $('#player2').width($('#player2').width() + speed);
             $('.').width($('#player2').width() + speed);
             console.log("P was pressed");
+            if (width >= "950px"){
+              alert('Player 2 is the Winner!!');
+            }
           }
         }
       }
