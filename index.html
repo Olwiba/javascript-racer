@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Racer Game</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" type="text/css" />
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  <!-- Scripts -->
+  <script src="racerGame.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+</head>
+<body class="center">
+  <div class="shade">
+
+    <h1>Two player Racer game</h1>
+    <h2>Game Objective :</h2>
+    <p>
+      Two players are needed to play, select which player you wish to be and use the key that is assigned to that player.
+      Once the game has <strong>started</strong> you need to press your key to advance your car.
+    </p>
+    <p>
+      Please choose which player you want to be and select I'm ready! Once both players are ready select the start game button and spam your key! 
+    </p>
+    <h2>To Win the Game :</h2>
+    <p>
+      The first player to make it to the end of the track wins!
+    </p>
+    <h3>Player Controls</h3>
+    <table>
+        <tr>
+          <th class="one">Player one</th>
+          <th>  </th>
+          <th class="two">Player two</th>
+        </tr>
+        </tr>
+        <tr>
+          <td>Q - Go forward</td>
+          <td>   </td>
+          <td>P - Go forward</td>
+        </tr>
+        <tr class="center">
+          <td id="player1Check"><button type="button" name="" onclick="player1Ready()">I'm Ready!</button></td>
+          <td> </td>
+          <td id="player2Check"><button type="button" name="player2Check" onclick="player2Ready()">I'm Ready!</button></td>
+        </tr>
+    </table>
+<br><br>
+<button type="button" name="" onclick="startGame()"> Start Game!</button>
+<button type="button" name="" onclick="restartGame()"> Restart!</button>
+<br>
+<br>
+
+</div>
+  <div class="game">
+    <div class="track">
+      <div class="player one" id="player1">
+        <img src="greencar.png" alt="" class="racecar"/>
+      </div>
+    </div>
+    <div class="track">
+      <div class="player two" id="player2">
+        <img src="bluecar.png" alt="" class="racecar"/>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+.player {
+  box-sizing: border-box;
+  height: 100px;
+  line-height: 400%;
+  display: block;
+  margin-left:0;
+  z-index: 10;
+  width: 5%;
+  color: white;
+  left: -100px;
+
+  border: 2px solid black;
+  /*border-radius: 2em;*/
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.one {
+  top: 40%;
+  background-color: green;
+}
+.two {
+  top: 50%;
+  background-color: blue;
+}
+
+.game {
+  width: 100%;
+  height: 100%;
+  margin-top: 1%;
+}
+.track {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 950px;
+  height: 150px;
+  padding-top:15px;
+  margin-bottom:-10px;
+  left: 50%;
+
+  background-clip: border-box;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+}
+
+
+.racecar {
+  height: 100px;
+  width:auto;
+}
+
+.shade {
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 3px
+}
+
+.center {
+  text-align: center;
+}
+
+#player1 {
+  width: 250px;
+}
+
+#player2 {
+  width: 250px;
+}
+
+#player1Check {
+    background-color: red;
+}
+
+#player2Check {
+    background-color: red;
+}
+
+html {
+  background-image: url("road.jpg");
+  color: white;
+}
+
+body {
+  overflow-x: hidden; /* hide scroll bars */
+}
+
+h1 {
+  font-size: 150%;
+}
+h2 {
+  font-size: 130%;
+}
+
+table {
+  display: inline;
+}
+
+table, th, td {
+  padding: 3px;
+}
+
+td {
+  padding: 3px;
+}
+
+button {
+  color: black;
+}
