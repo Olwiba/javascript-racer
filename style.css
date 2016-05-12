@@ -1,13 +1,25 @@
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+.content {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width:100%;
+  margin: 25px;
+}
+
 .player {
   box-sizing: border-box;
   height: 100px;
   line-height: 400%;
-  display: block;
+  display: absolute;
   margin-left:0;
   z-index: 10;
   width: 5%;
   color: white;
-  left: -100px;
+  position: right;
 
   border: 2px solid black;
   /*border-radius: 2em;*/
@@ -18,12 +30,16 @@
 }
 
 .one {
-  top: 40%;
-  background-color: green;
+  background-color: rgba(0,128,0, 0.8);
 }
 .two {
-  top: 50%;
-  background-color: blue;
+  background-color: rgba(0,0,255, 0.8);
+}
+.three {
+  background-color: rgba(255,255,0, 0.8);
+}
+.four {
+  background-color: rgba(255,165,0, 0.8);
 }
 
 .game {
@@ -31,18 +47,29 @@
   height: 100%;
   margin-top: 1%;
 }
+
+#tracks {
+  display: none;
+}
 .track {
   display: inline-block;
   box-sizing: border-box;
-  width: 950px;
+  width: 100%;
   height: 150px;
   padding-top:15px;
-  margin-bottom:-10px;
-  left: 50%;
-
   background-clip: border-box;
   background-color: rgba(0,0,0,0.5);
   color: white;
+}
+
+.track{
+  border-bottom-width: 4px;
+  border-bottom-style: dashed;
+  border-bottom-color: rgb(110, 16, 11);
+}
+
+.track:nth-child(4) {
+	border: none;
 }
 
 
@@ -53,11 +80,67 @@
 
 .shade {
   background-color: rgba(0,0,0,0.5);
-  border-radius: 3px
+  border-radius: 20px;
+  width: auto;
+}
+
+.vert {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#info {
+  width: 60%;
+  padding: 20px;
+  height: auto;
+  margin: auto;
+}
+
+.header-img {
+	display: block;
+  width: 100%;
+  max-width: 940px;
+  height:auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .center {
   text-align: center;
+}
+
+.title {
+  width: 10%;
+}
+
+.playerReady {
+  display: relative;
+  width: 49%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gameStart {
+	display: none;
+	text-align: center;
+}
+
+.startbutton {
+  width:99%
+}
+
+.startbutton2 {
+  width:50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.readybutton {
+  width:50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #player1 {
@@ -68,16 +151,20 @@
   width: 250px;
 }
 
-#player1Check {
-    background-color: red;
+#player3 {
+  width: 250px;
 }
 
-#player2Check {
-    background-color: red;
+#player4 {
+  width: 250px;
 }
 
 html {
-  background-image: url("road.jpg");
+  background: url("road.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+		-moz-background-size: cover;
+			-o-background-size: cover;
+	background-size: cover;
   color: white;
 }
 
@@ -86,24 +173,36 @@ body {
 }
 
 h1 {
-  font-size: 150%;
-}
-h2 {
-  font-size: 130%;
+  font-family: 'Audiowide', cursive;
+  font-size: 1.5em;
+  letter-spacing: 1px;
 }
 
 table {
   display: inline;
+
 }
 
 table, th, td {
   padding: 3px;
+  vertical-align: top;
 }
 
 td {
-  padding: 3px;
+  padding: 10px;
+}
+
+td:nth-child(2) {
+  border-left-width: 3px;
+  border-left-style:solid;
+  border-left-color: rgb(110, 16, 11);
 }
 
 button {
   color: black;
+}
+
+p {
+  font-family: 'Poiret One', cursive;
+  font-size: 1.3em;
 }

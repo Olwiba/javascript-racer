@@ -1,69 +1,87 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Racer Game</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" type="text/css" />
-  <link rel="stylesheet" href="style.css" type="text/css" />
-
-  <!-- Scripts -->
-  <script src="racerGame.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
-</head>
-<body class="center">
-  <div class="shade">
-
-    <h1>Two player Racer game</h1>
-    <h2>Game Objective :</h2>
-    <p>
-      Two players are needed to play, select which player you wish to be and use the key that is assigned to that player.
-      Once the game has <strong>started</strong> you need to press your key to advance your car.
-    </p>
-    <p>
-      Please choose which player you want to be and select I'm ready! Once both players are ready select the start game button and spam your key! 
-    </p>
-    <h2>To Win the Game :</h2>
-    <p>
-      The first player to make it to the end of the track wins!
-    </p>
-    <h3>Player Controls</h3>
+  <head>
+    <meta charset="UTF-8">
+    <!-- Page Title -->
+    <title>Racer Game</title>
+    <!-- Page Icon -->
+    <link rel="shortcut icon" type="image/ico" href="./images/favIcon.ico">
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="racerGame.js"></script>
+  </head>
+<body>
+  <div class="content">
+    <div class="vert">
+  <div class="shade" id="info">
+    <img src="/images/jsLogo.png" alt="JavaScript Racer" class="header-img"/>
     <table>
-        <tr>
-          <th class="one">Player one</th>
-          <th>  </th>
-          <th class="two">Player two</th>
-        </tr>
-        </tr>
-        <tr>
-          <td>Q - Go forward</td>
-          <td>   </td>
-          <td>P - Go forward</td>
-        </tr>
-        <tr class="center">
-          <td id="player1Check"><button type="button" name="" onclick="player1Ready()">I'm Ready!</button></td>
-          <td> </td>
-          <td id="player2Check"><button type="button" name="player2Check" onclick="player2Ready()">I'm Ready!</button></td>
-        </tr>
+      <tr>
+        <td class="title">
+          <h1 class="center">Game Objective:</h1>
+        </td>
+        <td>
+          <p>
+            Two players are needed to play, select which player you wish to be and use the key that is assigned to that player.
+            Once the game has <strong>started</strong> you need to press your key to advance your car.<br />
+            Please choose which player you want to be and select I'm ready! Once both players are ready select the start game button and spam your key!
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">
+          <h1 class="center">To Win the Game:</h1>
+        </td>
+        <td>
+          <p>
+            The first player to make it to the end of the track wins!
+          </p>
+        </td>
+      </tr>
+	  <tr>
+	  </tr>
     </table>
-<br><br>
-<button type="button" name="" onclick="startGame()"> Start Game!</button>
-<button type="button" name="" onclick="restartGame()"> Restart!</button>
-<br>
-<br>
-
-</div>
-  <div class="game">
+	<div class="playerControls">
+    <h1 class="center">Player Controls</h1>
+    <img src="./Images/p1Nready.png" alt=" " class="playerReady" id="player1rdy" onclick="player1Ready()"/>
+    <img src="./Images/p2Nready.png" alt=" " class="playerReady" id="player2rdy" onclick="player2Ready()"/>
+	   <p class="center"> - - - Want to add more players? - - - </p>
+	  <img src="./Images/p3Nready.png" alt=" " class="playerReady" id="player3rdy" onclick="player3Ready()"/>
+    <img src="./Images/p4Nready.png" alt=" " class="playerReady" id="player4rdy" onclick="player4Ready()"/>
+    <img src="./Images/start.png" alt=" " class="startbutton" onclick="ready()"/>
+	</div>
+	<div class="gameStart">
+	<h1 id="output">Both players ready</h1>
+	<img src="./Images/start.png" alt=" " class="startbutton2" onclick="startGame()"/>
+	</div>
+  <div class="game" id="tracks">
     <div class="track">
       <div class="player one" id="player1">
-        <img src="greencar.png" alt="" class="racecar"/>
+        <img src="Images/greencar.png" alt="" class="racecar" />
       </div>
     </div>
     <div class="track">
       <div class="player two" id="player2">
-        <img src="bluecar.png" alt="" class="racecar"/>
+        <img src="Images/bluecar.png" alt="" class="racecar" />
+      </div>
+    </div>
+    <div class="track">
+      <div class="player three" id="player3">
+        <img src="Images/yellowcar.png" alt="" class="racecar"/>
+      </div>
+    </div>
+    <div class="track">
+      <div class="player four" id="player4">
+        <img src="Images/orangecar.png" alt="" class="racecar"/>
       </div>
     </div>
   </div>
+    <img src="./Images/restart.png" alt=" " class="readybutton" onclick="restartGame()"/>
+</div>
+</div>
+</div>
 </body>
 </html>
